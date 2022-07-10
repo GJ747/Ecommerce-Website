@@ -4,15 +4,17 @@
 in this project i build an ecommerce website with all necessary features which modern ecommerce website should have.
 
 - in this project i used following technologies
-Frontend 
+
+##Frontend 
 -
 - javascript, html, css, bootstrap
-Backend
+
+##Backend
 - 
 - nodejs, express, mongodb, razorpay api, ejs
 - npm pakages :- mongoose, bcrypt, uuid,
 
-Features
+##Features
 -
 - Product home page with responsive design which display all products
 - navbar with login, signin, user account, cart, product cetegory and search bar
@@ -21,9 +23,6 @@ Features
 - login page :- for user authentication i used crypto hash algorithm
 - user account page with necessary user infromations
 - payment page :- for payments i used razorpay payment getaway api and for payment verification i used crypto sha256 algorithm
-
-
-
 
 ## Demo
 
