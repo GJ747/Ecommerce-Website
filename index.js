@@ -18,8 +18,8 @@ const Oder = require('./product database/order');
 
 
 var razorPayInstance = new Razorpay({  
-    key_id: 'Use you own key',  
-    key_secret: 'Use you own key'
+    key_id: 'rzp_test_bR5Sj1nDTB4Ppj',  
+    key_secret: 'T8O9TnbZmSajstHOx2SCS8sQ'
 });
 
 
@@ -191,7 +191,7 @@ app.post('/chechout', function(req, res, next) {
 	}
 	razorPayInstance.orders.create(params)
 	.then(async (response) => {
-		const razorpayKeyId = 'Use you own key'
+		const razorpayKeyId = 'rzp_test_bR5Sj1nDTB4Ppj'
 		// Save orderId and other payment details
         var oderId = response.id;
 		const paymentDetail = new PaymentDetail({
@@ -215,7 +215,7 @@ app.post('/chechout', function(req, res, next) {
             await orderDetails.save();
 			res.render('checkout.ejs', {
 				title: "Confirm Order",
-				razorpayKeyId: 'Use you own key',
+				razorpayKeyId: 'rzp_test_bR5Sj1nDTB4Ppj',
 				paymentDetail
 			})
 		} catch (err) {
@@ -231,7 +231,7 @@ app.post('/chechout', function(req, res, next) {
 app.post('/verify', async function(req, res, next) {
 	body=req.body.razorpay_order_id + "|" + req.body.razorpay_payment_id;
 	let crypto = require("crypto");
-	let expectedSignature = crypto.createHmac('sha256', 'Use you own key secret key')
+	let expectedSignature = crypto.createHmac('sha256', 'T8O9TnbZmSajstHOx2SCS8sQ')
 	.update(body.toString())
 	.digest('hex');
     if(expectedSignature === req.body.razorpay_signature) {

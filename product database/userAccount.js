@@ -8,7 +8,6 @@ const userAccount = new mongoose.Schema({
         type: String,
         trim: true,
         lowercase: true,
-        unique: true,
     },
     address : String
 

@@ -10,12 +10,14 @@ const abc = document.cookie.match('true')
 function hide(){
     login.style.display = "none";
     signup.style.display = "none";
+    cart.style.display = "block";
     user.style.display = "block";
 }
 
 function show(){
     login.style.display = "block";
     signup.style.display = "block";
+    cart.style.display = "none";
     user.style.display = "none";
 }
 
